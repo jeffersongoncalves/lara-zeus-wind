@@ -5,7 +5,7 @@ weight: 4
 
 ## Usage
 after you finished installing `wind` all you have to do is visit the url `/admin` to manage the Letters,
-and `/contact-us` to access the contact form.
+and `/wind` to access the contact form.
 
 check the configuration section for more details
 

@@ -11,7 +11,7 @@ these all the available configuration, and their defaults values
 
 ```php
 WindPlugin::make()
-    ->windPrefix('wind')
+    ->windPrefix('contact-us')
     ->windMiddleware(['web'])
     ->defaultDepartmentId(1)
     ->defaultStatus('NEW')
