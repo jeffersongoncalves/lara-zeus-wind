@@ -153,8 +153,8 @@ trait Configuration
     public static function getModel(string $model): string
     {
         return array_merge(
-            (new static())->windModels,
-            (new static())::get()->getWindModels()
+            (new static)->windModels,
+            (new static)::get()->getWindModels()
         )[$model];
     }
 }
