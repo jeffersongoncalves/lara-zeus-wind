@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-wind.png" /></a>
+<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-wind.webp" /></a>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@ contact form, with simple dashboard to read and replay to any messages you recei
 ## Support Filament
 
 <a href="https://github.com/sponsors/danharrin">
-<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.png">
+<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.webp">
 </a>
 
 ## Features
@@ -61,8 +61,8 @@ visit the url `/admin` to manage the Letters, and `/contact-us` to access the co
 
 ## Quick start
 
-[![starter-kit](https://larazeus.com/images/starter-kit-mini.png?v=2)](https://github.com/lara-zeus/zeus)
-[![artemis](https://larazeus.com/images/artemis-mini.png?v=2)](https://github.com/lara-zeus/artemis)
+[![starter-kit](https://larazeus.com/images/starter-kit-mini.webp?v=2)](https://github.com/lara-zeus/zeus)
+[![artemis](https://larazeus.com/images/artemis-mini.webp?v=2)](https://github.com/lara-zeus/artemis)
 
 ## Changelog
 

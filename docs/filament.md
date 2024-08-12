@@ -13,14 +13,14 @@ Wind contact form for your website with easy to use dashboard, works as a plugin
 
 * **Contact form:** simple contact form allow your users to contact you
 
-![](https://larazeus.com/images/screenshots/wind/admin-1.png)
-![](https://larazeus.com/images/screenshots/wind/admin-2.png)
-![](https://larazeus.com/images/screenshots/wind/admin-3.png)
+![](https://larazeus.com/images/screenshots/wind/admin-1.webp)
+![](https://larazeus.com/images/screenshots/wind/admin-2.webp)
+![](https://larazeus.com/images/screenshots/wind/admin-3.webp)
 
 * **Departments:** optionally you can create departments to make it easy to manage the letters
 
-![](https://larazeus.com/images/screenshots/wind/frontend-1.png)
-![](https://larazeus.com/images/screenshots/wind/frontend-2.png)
+![](https://larazeus.com/images/screenshots/wind/frontend-1.webp)
+![](https://larazeus.com/images/screenshots/wind/frontend-2.webp)
 
 ## More Details
 **✨ to learn more about Wind the form builder, please visit:**
