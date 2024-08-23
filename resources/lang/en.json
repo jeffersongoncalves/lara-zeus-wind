@@ -16,6 +16,7 @@
     "status_NEW": "NEW",
     "status_READ": "READ",
     "status_REPLIED": "REPLIED",
+    "status_SENT": "SENT",
     "reply_message": "reply message",
     "reply_title": "reply title",
     "message": "message",

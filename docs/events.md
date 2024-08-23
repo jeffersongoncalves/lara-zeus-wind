@@ -7,10 +7,16 @@ weight: 5
 
 wind will fire these events:
 - `LaraZeus\Wind\Events\LetterSent`
+  when a new letter sent from the website
 - `LaraZeus\Wind\Events\ReplySent`
+  when you send a replay from the admin panel
+- `LaraZeus\Wind\Events\NewLetterSent`
+  when you send a new letter from the admin panel
 
 ## Register a Listener:
+
 * first create your listener:
+* 
 ```bash
 php artisan make:listener SendWindNotification --event=LetterSent
 ```
