@@ -3,9 +3,9 @@
 namespace LaraZeus\Wind\Filament\Resources;
 
 use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -26,20 +26,21 @@ use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\HtmlString;
 use LaraZeus\Wind\Filament\Resources\LetterResource\Pages;
 use LaraZeus\Wind\Models\Letter;
 use LaraZeus\Wind\WindPlugin;
 
 class LetterResource extends Resource
 {
+    protected static ?string $navigationIcon = 'heroicon-o-inbox';
+
+    protected static ?int $navigationSort = 2;
+
     public static function getModel(): string
     {
         return WindPlugin::get()->getModel('Letter');
     }
-
-    protected static ?string $navigationIcon = 'heroicon-o-inbox';
-
-    protected static ?int $navigationSort = 2;
 
     public static function getNavigationBadge(): ?string
     {
@@ -61,8 +62,8 @@ class LetterResource extends Resource
     {
         return $form
             ->schema([
-
                 Section::make()
+                    ->visibleOn('edit')
                     ->schema([
                         Placeholder::make('sender_info')
                             ->label('Sender Info:')
@@ -73,6 +74,7 @@ class LetterResource extends Resource
                             ->required()
                             ->disabled()
                             ->maxLength(255),
+
                         TextInput::make('email')
                             ->label(__('email'))
                             ->email()
@@ -90,22 +92,23 @@ class LetterResource extends Resource
                             ->label(__('sent at'))
                             ->disabled(),
 
-                        Textarea::make('message')
+                        Placeholder::make('message')
                             ->label(__('message'))
-                            ->rows(10)
                             ->disabled()
-                            ->maxLength(65535)
+                            ->content(fn (Letter $record) => new HtmlString($record->message))
                             ->columnSpan(['sm' => 2]),
                     ])
-                    ->columns(2),
+                    ->columns(),
 
                 Section::make()
+                    ->visibleOn('edit')
                     ->schema([
                         Select::make('department_id')
                             ->label(__('department'))
                             ->options(WindPlugin::get()->getModel('Department')::pluck('name', 'id'))
                             ->required()
                             ->visible(fn (): bool => WindPlugin::get()->hasDepartmentResource()),
+
                         TextInput::make('status')
                             ->label(__('status'))
                             ->required()
@@ -116,13 +119,47 @@ class LetterResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->columnSpan(['sm' => 2]),
-                        Textarea::make('reply_message')
+
+                        RichEditor::make('reply_message')
                             ->label(__('reply_message'))
-                            ->rows(10)
                             ->required()
                             ->maxLength(65535)
                             ->columnSpan(['sm' => 2]),
-                    ])->columns(2),
+                    ])
+                    ->columns(),
+
+                Section::make()
+                    ->visibleOn('create')
+                    ->schema([
+                        TextInput::make('name')
+                            ->label(__('to name'))
+                            ->required()
+                            ->maxLength(255),
+
+                        TextInput::make('email')
+                            ->label(__('to email'))
+                            ->email()
+                            ->required()
+                            ->maxLength(255),
+
+                        TextInput::make('title')
+                            ->label(__('title'))
+                            ->required()
+                            ->maxLength(255),
+
+                        Select::make('department_id')
+                            ->label(__('department'))
+                            ->options(WindPlugin::get()->getModel('Department')::pluck('name', 'id'))
+                            ->required(fn (): bool => WindPlugin::get()->hasDepartmentResource())
+                            ->visible(fn (): bool => WindPlugin::get()->hasDepartmentResource()),
+
+                        RichEditor::make('message')
+                            ->label(__('message'))
+                            ->required()
+                            ->maxLength(65535)
+                            ->columnSpan(['sm' => 2]),
+                    ])
+                    ->columns(),
             ]);
     }
 
@@ -226,6 +263,7 @@ class LetterResource extends Resource
     {
         return [
             'index' => Pages\ListLetters::route('/'),
+            'create' => Pages\CreateLetter::route('/create'),
             'edit' => Pages\EditLetter::route('/{record}/edit'),
         ];
     }

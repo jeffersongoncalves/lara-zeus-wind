@@ -17,6 +17,7 @@
     "status_NEW": "جديد",
     "status_READ": "مقروء",
     "status_REPLIED": "تم الرد",
+    "status_SENT": "تم الإرسال",
     "reply_message": "نص الرد",
     "reply_title": "عنوان الرد",
     "message": "الرسالة",
