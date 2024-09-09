@@ -7,7 +7,7 @@ weight: 1
 
 Lara-zeus Wind, is a package provides a simple contact form manger, with the abilety to store the messages in the database, and you can reply to them from the dashboard.
 
-**[Demo](https://wind.larazeus.com) · [Source Code](https://github.com/lara-zeus/wind) · [Discord](https://discord.com/channels/883083792112300104/943098344174141460)**
+**[Demo](https://wind.larazeus.com) · [Source Code](https://github.com/lara-zeus/wind) · [Discord](https://discord.com/channels/883083792112300104/1282763077611421829)**
 
 ## features:
 
@@ -20,6 +20,6 @@ Lara-zeus Wind, is a package provides a simple contact form manger, with the abi
 ## Support
 
 available support channels:
-* join our channel in discord [Discord](https://discord.com/channels/883083792112300104/943098344174141460)
+* Join our channel on [Discord](https://discord.com/channels/883083792112300104/1282763077611421829)
 * open an issue on [GitHub](https://github.com/lara-zeus/wind/issues)
 * email us using the [contact center](https://larazeus.com/contact-us)
