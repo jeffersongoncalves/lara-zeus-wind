@@ -77,37 +77,32 @@ class ContactsForm extends Component implements Forms\Contracts\HasForms
                             'default' => 1,
                             'md' => 2,
                         ])
-                        ->label('')
+                        ->hiddenLabel()
                         ->visible(fn (): bool => WindPlugin::get()->hasDepartmentResource()),
 
-                    Section::make('')
+                    Section::make()
                         ->schema([
-                            TextInput::make('name')
-                                ->columnSpan(1)
-                                ->required()
-                                ->minLength(6)
-                                ->label(__('name')),
+                            Grid::make()
+                                ->schema([
+                                    TextInput::make('name')
+                                        ->required()
+                                        ->minLength(6)
+                                        ->label(__('name')),
 
-                            TextInput::make('email')
-                                ->columnSpan(1)
-                                ->required()
-                                ->email()
-                                ->label(__('email')),
+                                    TextInput::make('email')
+                                        ->required()
+                                        ->email()
+                                        ->label(__('email')),
+                                ]),
 
                             TextInput::make('title')
-                                ->columnSpan(2)
                                 ->required()
                                 ->label(__('title')),
 
                             Textarea::make('message')
-                                ->columnSpan(2)
                                 ->rows(10)
                                 ->required()
                                 ->label(__('message')),
-                        ])
-                        ->columns([
-                            'default' => 1,
-                            'md' => 2,
                         ]),
                 ]),
         ];
