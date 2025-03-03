@@ -2,6 +2,16 @@
 
 All notable changes to `wind` will be documented in this file
 
+## v3.2.3 - 2025-03-03
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/lara-zeus/wind/pull/88
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/lara-zeus/wind/pull/89
+* support laravel 12 by @atmonshi in https://github.com/lara-zeus/wind/pull/90
+
+**Full Changelog**: https://github.com/lara-zeus/wind/compare/v3.2.2...v3.2.3
+
 ## v3.2.2 - 2024-09-25
 
 ### What's Changed
