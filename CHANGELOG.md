@@ -2,6 +2,14 @@
 
 All notable changes to `wind` will be documented in this file
 
+## v3.2.4 - 2025-03-07
+
+### What's Changed
+
+* fix test by @atmonshi in https://github.com/lara-zeus/wind/pull/91
+
+**Full Changelog**: https://github.com/lara-zeus/wind/compare/v3.2.3...v3.2.4
+
 ## v3.2.3 - 2025-03-03
 
 ### What's Changed
