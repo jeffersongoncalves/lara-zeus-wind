@@ -2,10 +2,9 @@
 
 namespace LaraZeus\Wind\Tests;
 
-use ArchTech\SEO\SEOServiceProvider;
+use LaraZeus\SEO\SEOServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
-use Codeat3\BladeIconpark\BladeIconparkServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
@@ -53,7 +52,6 @@ class TestCase extends Orchestra
             CoreServiceProvider::class,
             WindServiceProvider::class,
             SEOServiceProvider::class,
-            BladeIconparkServiceProvider::class,
         ];
     }
 
